@@ -1,1 +1,3 @@
-# MATH-134
+# MATH 134 - Cryptography
+
+Optional exercises for MATH 134 - Cryptography.
