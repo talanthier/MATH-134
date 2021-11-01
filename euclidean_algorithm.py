@@ -7,10 +7,10 @@ def GCD(a,b):
 
 	a = x 
 	b = y
-
 	r = x % y
 	q = [int((x-r)/y)]
 	while r != 0: # loop for Euclidean Algorithm
+
 		x = y 
 		y = r 
 		r = x % y
@@ -22,13 +22,13 @@ def GCD(a,b):
 	u[1] = 1
 	v[0] = 1
 	v[1] = -q[0]
-	for i in range(2,len(q)): # computes u,v
+	for i in range(2,len(q)): # loop to compute u,v
 		u[i] = u[i-2] - q[i-1]*u[i-1]
 		v[i] = v[i-2] - q[i-1]*v[i-1]
-		#print('{} - {}*{} = {}'.format(u[i-2], q[i], u[i-1], u[i]))
+		print('{} - {}*{} = {}'.format(v[i-2], q[i], v[i-1], v[i]))
 	u = int(u[-1])
 	v = int(v[-1])
 	return(gcd, u,v)
 
 if __name__ == '__main__':
-	print(GCD(2458437443,903827662))
+	print(GCD(27, 22))
